@@ -10,8 +10,10 @@
              var lletres = "";
             function comprovar(){   
        var lletra =document.getElementById("lletra").value;
-       lletra=lletra.toLowerCase();
-       switch (lletra) {
+      // Convertim les majúsculues a minúscules
+        lletra=lletra.toLowerCase();
+       // Eliminam els accents o dièresis de les vocals
+        switch (lletra) {
            case "à":
            case "á":
              lletra= "a";
@@ -35,17 +37,21 @@
        }
        if((lletra >= "a") && (lletra <= "m")){
            window.alert("Has encertat");
+           // Afegim lletra a Paraula i actualitzam la pantalla.
            paraula = paraula + lletra + " ";
            document.getElementById("paraula").innerHTML= paraula;
        }else{
            window.alert("Has fallat");
-           lletres = lletres + lletra + " ";
+           // Afegim lletra a Lletres i actualitzam la pantalla.
+            lletres = lletres + lletra + " ";
            document.getElementById("lletres").innerHTML= lletres;
            vides= vides -1;
            
        }
+        // Actualitzam Vides a la pantalla.
               document.getElementById("vides").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
-              if(vides<=0){
+              // Comprovam si has perdut o has guanyat.
+        if(vides<=0){
                   window.alert("Has perdut");
                   Aturatot();
               }
