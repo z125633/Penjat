@@ -36,12 +36,12 @@
              break;
        }
        if((lletra >= "a") && (lletra <= "m")){
-           window.alert("Has encertat");
+           window.alert("Has encertat :D");
            // Afegim lletra a Paraula i actualitzam la pantalla.
            paraula = paraula + lletra + " ";
            document.getElementById("paraula").innerHTML= paraula;
        }else{
-           window.alert("Has fallat");
+           window.alert("Has fallat :C");
            // Afegim lletra a Lletres i actualitzam la pantalla.
             lletres = lletres + lletra + " ";
            document.getElementById("lletres").innerHTML= lletres;
@@ -52,11 +52,11 @@
               document.getElementById("vides").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
               // Comprovam si has perdut o has guanyat.
         if(vides<=0){
-                  window.alert("Has perdut");
+                  window.alert("Has perdut :'(");
                   Aturatot();
               }
               if(paraula.length >= 14){
-                  window.alert("has guanyat");
+                  window.alert("has guanyat :D");
                   Aturatot();
               }
               function Aturatot(){
