@@ -38,11 +38,14 @@ var paraula= "";
            // Afegim lletra a Paraula i actualitzam la pantalla.
            paraula = paraula + lletra + " ";
            document.getElementById("paraula").innerHTML= paraula;
+           document.getElementById("miau").play();
        }else{
            window.alert("Has fallat :C");
            // Afegim lletra a Lletres i actualitzam la pantalla.
             lletres = lletres + lletra + " ";
            document.getElementById("lletres").innerHTML= lletres;
+            document.getElementById("clockticking").play();
+           document.getElementById("boomcloud").play();
            vides= vides -1;
            MostrarImg();
        }
@@ -51,10 +54,14 @@ var paraula= "";
               // Comprovam si has perdut o has guanyat.
         if(vides<=0){
                   window.alert("Has perdut :'(");
+                  document.getElementById("catfight").play();
                   Aturatot();
+                  window.alert("En pau descansi – RIP!");
+                  document.getElementById("belltollx3").play();
               }
               if(paraula.length >= 14){
                   window.alert("has guanyat :D");
+                  document.getElementById("cheer").play();
                   Aturatot();
               }
               
