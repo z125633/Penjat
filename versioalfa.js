@@ -34,11 +34,12 @@ var paraula= "";
              break;
        }
        if((lletra >= "a") && (lletra <= "m")){
+           document.getElementById("miau").play();
            window.alert("Has encertat :D");
            // Afegim lletra a Paraula i actualitzam la pantalla.
            paraula = paraula + lletra + " ";
            document.getElementById("paraula").innerHTML= paraula;
-           document.getElementById("miau").play();
+    document.getElementById("").play();
        }else{
            window.alert("Has fallat :C");
            // Afegim lletra a Lletres i actualitzam la pantalla.
