@@ -39,7 +39,6 @@ var paraula= "";
            // Afegim lletra a Paraula i actualitzam la pantalla.
            paraula = paraula + lletra + " ";
            document.getElementById("paraula").innerHTML= paraula;
-    document.getElementById("").play();
        }else{
            window.alert("Has fallat :C");
            // Afegim lletra a Lletres i actualitzam la pantalla.
@@ -63,6 +62,7 @@ var paraula= "";
               if(paraula.length >= 14){
                   window.alert("has guanyat :D");
                   document.getElementById("cheer").play();
+                  document.body.style.backgroundImage="url('img/Party.png')";
                   Aturatot();
               }
               
