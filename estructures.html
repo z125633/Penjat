@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Alfa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="versioalfa.js" type="text/javascript"></script>
+        <link href="versioalfaimg.css" rel="stylesheet" type="text/css"/>
+    </head>
+        <body onload="Amagar(); document.getElementById('mystery').play();" style="background-image: url('img/Desert.png');
+         background-size: 640px 480px; background-repeat: no-repeat;">
+          
+            <h1> Joc del Penjat</h1>
+        <label for="lletra"></label>
+        <input id="lletra" placeholder="escriu una lletra minuscula">
+        <button id="button" onclick="comprovar()">Comprovar</button>
+       
+        <button id="pista" onclick="mostrarpista()">Pista</button>
+            
+        <h2>Paraula</h2>
+        <p id="paraula">&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;- </p>
+        <h2>Vides</h2>
+        <p id="vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</p>
+        <h2>Lletres</h2>
+        <p id="lletres"> &nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;- </p>
+        <p>Credits:<a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">
+         El joc del Penjat on Scratch</a></p>
+   
+        <div id="idiomes">
+        <a href="https://zingy--praline--792c66-netlify-app.translate.goog/versioalfa?_x_tr_sl=ca&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img src="img/img/es.png" id="espanyol" alt=""/></a>
+        <a href="https://zingy--praline--792c66-netlify-app.translate.goog/versioalfa?_x_tr_sl=ca&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=wapp"><img src="img/img/it.png" id="italia" alt=""/></a>
+        <a href="https://zingy--praline--792c66-netlify-app.translate.goog/versioalfa?_x_tr_sl=ca&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp"><img src="img/img/fr.png" id="frances" alt=""/></a>
+        <a href="https://zingy--praline--792c66-netlify-app.translate.goog/versioalfa?_x_tr_sl=ca&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp"><img src="img/img/gb.png" id="angles" alt=""/></a>
+        <img src="img/img/ca.png" id="catalan" alt=""/>
+        <a href="https://zingy--praline--792c66-netlify-app.translate.goog/versioalfa?_x_tr_sl=ca&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp"><img src="img/img/de.png" id="aleman" alt=""/></a>
+        </div>
+                
+        <div id="caminar">
+        <img src="img/img/caminar.gif" width="86" height="90"/>
+        <img id="rotar"> 
+        <img src="img/img/rotar.gif" width="86" height="90"/>
+        </div>
+        <div id="imatges">
+        <img src="img/ahorcado_0.png" alt=""
+        id="ahorcado_0"
+        width="280" height="270"/>
+        <img src="img/ahorcado_1.png" alt=""
+                id="ahorcado_1"
+                width="280" height="270"/>
+                <img src="img/ahorcado_2.png" alt=""
+                id="ahorcado_2"
+                width="280" height="270"/>
+                <img src="img/ahorcado_3.png" alt=""
+                id="ahorcado_3"
+                width="280" height="270"/>
+                <img src="img/ahorcado_4.png" alt=""
+                id="ahorcado_4"
+                width="280" height="270"/>
+                <img src="img/ahorcado_5.png" alt=""
+                id="ahorcado_5"
+                width="280" height="270"/>
+                <img src="img/ahorcado_6.png" alt=""
+                id="ahorcado_6"
+                width="280" height="270"/>
+           </div>
+                   
+                <audio id="miau">
+                <source src="img/aud/miau.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="cheer">
+                <source src="img/aud/cheer.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="catfight">
+                <source src="img/aud/cat-fight.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="boomcloud">
+                <source src="img/aud/boom_cloud.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="belltollx3">
+                <source src="img/aud/bell_toll_x3.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="clockticking">
+                <source src="img/aud/clock_ticking.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="mystery">
+                <source src="img/aud/mystery.mp3" type="audio/mpeg">
+                </audio>
+</body>
+</html>
+
