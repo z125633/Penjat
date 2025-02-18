@@ -3,21 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
-             var paraula= "";
-             var vides = 7;
-             var lletres = "";
+            var Paraula= [];
+            document.body.style.display="block";
+            var vides = 7;
+            var Lletres = ["_","_","_","_","_","_","_"];
             //Llista de paraules per al joc i les pistes associades
             var paraules=["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
-             var pistes = ["A la quinta forca","A ca un penjat,no hi anomenis cordes",
+            var pistes = ["A la quinta forca","A ca un penjat,no hi anomenis cordes",
                            "Setze jutges d'un jutjat mengen fetge d'un penjat"];
-             var paraulespistes = [1,2,0,2,2,2,1,0,2];
-             //Escull una paraula aleatòriament
-             var aleatori = Math.floor(Math.random()* paraules.length);
-             var paraula = paraules[aleatori];
-             var pista = pistes[paraulespistes[aleatori]];
-             //Marcam cada lletra amb un "_"
-             for (var i = 0; 1 < paraules.length; i++){
-                 paraula[i]= "_";
+            var paraulespistes = [1,2,0,2,2,2,1,0,2];
+            //Escull una paraula aleatòriament
+            var aleatori = Math.floor(Math.random()* paraules.length);
+            var paraula = paraules[aleatori];
+            var pista = pistes[paraulespistes[aleatori]];
+            //Marcam cada lletra amb un "_"
+            for (var i = 0; 1 < paraules.length; i++){
+                 Paraula[i]= "_";
              }
              
             function mostrarpista(){
@@ -25,123 +26,124 @@
                 window.alert(pista);
             }
             function comprovar(){   
-       var lletra =document.getElementById("lletra").value;
-      // Convertim les majúsculues a minúscules
-        lletra=lletra.toLowerCase();
-       // Eliminam els accents o dièresis de les vocals
-        switch (lletra) {
-           case "à":
-           case "á":
-             lletra= "a";
-             break;
-           case "é":
-           case "è":
-             lletra= "e";
-             break;
-           case "í":
-           case "ì":
-             lletra= "i";
-             break;
-           case "ó": 
-           case "ò":
-             lletra= "o";
-             break;
-           case "ú":
-           case "ù":
-             lletra= "u";
-             break;
+            var lletra =document.getElementById("lletra").value;
+            // Convertim les majúsculues a minúscules
+            lletra=lletra.toLowerCase();
+            // Eliminam els accents o dièresis de les vocals
+            switch (lletra) {
+            case "à":
+            case "á":
+            lletra= "a";
+            break;
+            case "é":
+            case "è":
+            lletra= "e";
+            break;
+            case "í":
+            case "ì":
+            lletra= "i";
+            break;
+            case "ó": 
+            case "ò":
+            lletra= "o";
+            break;
+            case "ú":
+            case "ù":
+            lletra= "u";
+            break;
        }
-       if((lletra >= "a") && (lletra <= "m")){
-           document.getElementById("miau").play();
-           window.alert("Has encertat :D");
-           // Afegim lletra a Paraula i actualitzam la pantalla.
-           paraula = paraula + lletra + " ";
-           document.getElementById("paraula").innerHTML= paraula;
-           document.getElementById("timer").play();
+            if((lletra >= "a") && (lletra <= "m")){
+            document.getElementById("miau").play();
+            window.alert("Has encertat :D");
+            // Afegim lletra a Paraula i actualitzam la pantalla.
+            paraula = paraula + lletra + " ";
+            document.getElementById("paraula").innerHTML= paraula;
+            document.getElementById("timer").play();
             
-       }else{
-           window.alert("Has fallat :C");
-           // Afegim lletra a Lletres i actualitzam la pantalla.
+            }else{
+            window.alert("Has fallat :C");
+            // Afegim lletra a Lletres i actualitzam la pantalla.
             lletres = lletres + lletra + " ";
-           document.getElementById("lletres").innerHTML= lletres;
+            document.getElementById("lletres").innerHTML= lletres;
             document.getElementById("clockticking").play();
-           document.getElementById("boomcloud").play();
-           vides= vides -1;
-           MostrarImg();
+            document.getElementById("boomcloud").play();
+            vides= vides -1;
+            MostrarImg();
        }
-        // Actualitzam Vides a la pantalla.
-              document.getElementById("vides").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
-              // Comprovam si has perdut o has guanyat.
-        if(vides<=0){
-                  window.alert("Has perdut :'(");
-                  document.getElementById("catfight").play();
-                  Aturatot();
-                  window.alert("En pau descansi – RIP!");
-                  document.getElementById("belltollx3").play();
+            // Actualitzam Vides a la pantalla.
+            document.getElementById("vides").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+            // Comprovam si has perdut o has guanyat.
+            if(vides<=0){
+            window.alert("Has perdut :'(");
+            document.getElementById("catfight").play();
+            Aturatot();
+            window.alert("En pau descansi – RIP!");
+            document.getElementById("belltollx3").play();
               }
-              if(paraula.length >= 14){
-                  window.alert("has guanyat :D");
-                  document.getElementById("cheer").play();
-                  document.body.style.backgroundImage="url('img/Party.png')";
-                  Aturatot();
-              }
+            if(paraula.length >= 14){
+            window.alert("has guanyat :D");
+            document.getElementById("cheer").play();
+            document.body.style.backgroundImage="url('img/Party.png')";
+            Aturatot();
+            }
               
             }
-              function Aturatot(){
-                  document.getElementById("lletra").disabled=true;
-                  document.getElementById("button").disabled=true;
+            function Aturatot(){
+            document.getElementById("lletra").disabled=true;
+            document.getElementById("button").disabled=true;
               
               }
           
-              function Amagar(){
-                   document.getElementById("ahorcado_6").hidden=true;
-                   document.getElementById("ahorcado_5").hidden=true;
-                   document.getElementById("ahorcado_4").hidden=true;
-                   document.getElementById("ahorcado_3").hidden=true;
-                   document.getElementById("ahorcado_2").hidden=true;
-                   document.getElementById("ahorcado_1").hidden=true;
-                   document.getElementById("ahorcado_0").hidden=true;
-                   if (!confirm('Anam a la quinta forca?')) {
-                   document.body.style.backgroundImage= "url('img/fondo1.png')";
+            function Amagar(){
+            document.getElementById("ahorcado_6").hidden=true;
+            document.getElementById("ahorcado_5").hidden=true;
+            document.getElementById("ahorcado_4").hidden=true;
+            document.getElementById("ahorcado_3").hidden=true;
+            document.getElementById("ahorcado_2").hidden=true;
+            document.getElementById("ahorcado_1").hidden=true;
+            document.getElementById("ahorcado_0").hidden=true;
+            if (!confirm('Anam a la quinta forca?')) {
+            document.body.style.backgroundImage= "url('img/fondo1.png')";
                    }
                }
                
-    function MostrarImg(){
-        switch(vides){
-        case 6:
-                document.getElementById("ahorcado_6").hidden=false;
+            function MostrarImg(){
+            switch(vides){
+            
+            case 6:
+            document.getElementById("ahorcado_6").hidden=false;
                     
                 break;
             
-        case 5:
-                document.getElementById("ahorcado_5").hidden=false;
-                document.getElementById("ahorcado_6").hidden=true; 
+            case 5:
+            document.getElementById("ahorcado_5").hidden=false;
+            document.getElementById("ahorcado_6").hidden=true; 
             
                 break;
                 
-        case 4:
-                document.getElementById("ahorcado_4").hidden=false;
-                document.getElementById("ahorcado_5").hidden=true;
+            case 4:
+            document.getElementById("ahorcado_4").hidden=false;
+            document.getElementById("ahorcado_5").hidden=true;
            
                 break;
-        case 3:
-                document.getElementById("ahorcado_3").hidden=false;
-                document.getElementById("ahorcado_4").hidden=true;
+        º   case 3:
+            document.getElementById("ahorcado_3").hidden=false;
+            document.getElementById("ahorcado_4").hidden=true;
            
                 break;
-        case 2:
-                document.getElementById("ahorcado_2").hidden=false;
-                document.getElementById("ahorcado_3").hidden=true;
+            case 2:
+            document.getElementById("ahorcado_2").hidden=false;
+            document.getElementById("ahorcado_3").hidden=true;
             
                 break;
-        case 1:
-                document.getElementById("ahorcado_1").hidden=false;
-                document.getElementById("ahorcado_2").hidden=true;
+            case 1:
+            document.getElementById("ahorcado_1").hidden=false;
+            document.getElementById("ahorcado_2").hidden=true;
             
                 break; 
-        case 0:
-                document.getElementById("ahorcado_0").hidden=false;
-                document.getElementById("ahorcado_1").hidden=true;
+            case 0:
+            document.getElementById("ahorcado_0").hidden=false;
+            document.getElementById("ahorcado_1").hidden=true;
             
                 break;
         }
