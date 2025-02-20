@@ -22,7 +22,6 @@
              }
              
             function mostrarpista(){
-                window.alert("mostrapista");
                 window.alert(pista);
             }
             function comprovar(){   
@@ -51,7 +50,7 @@
             case "ù":
             lletra= "u";
             break;
-       }
+                    }
             if((lletra >= "a") && (lletra <= "m")){
             document.getElementById("miau").play();
             window.alert("Has encertat :D");
@@ -76,14 +75,16 @@
             if(vides<=0){
             window.alert("Has perdut :'(");
             document.getElementById("catfight").play();
-            Aturatot();
+            document.body.style.backgroundImage="url('img/Jungle.png')";
             window.alert("En pau descansi – RIP!");
             document.getElementById("belltollx3").play();
+            Aturatot();
               }
             if(paraula.length >= 14){
             window.alert("has guanyat :D");
             document.getElementById("cheer").play();
             document.body.style.backgroundImage="url('img/Party.png')";
+            document.body.style.backgroundImage="url('img/ahorcado.jpg')";
             Aturatot();
             }
               
@@ -95,6 +96,7 @@
               }
           
             function Amagar(){
+               window.alert(pista);
             document.getElementById("ahorcado_6").hidden=true;
             document.getElementById("ahorcado_5").hidden=true;
             document.getElementById("ahorcado_4").hidden=true;
@@ -126,7 +128,7 @@
             document.getElementById("ahorcado_5").hidden=true;
            
                 break;
-        º   case 3:
+            case 3:
             document.getElementById("ahorcado_3").hidden=false;
             document.getElementById("ahorcado_4").hidden=true;
            
