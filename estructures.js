@@ -1,31 +1,30 @@
-/* 
+  /* 
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
-            var Paraula= [];
-            document.body.style.display="block";
+            var Paraula = [];
             var vides = 7;
-            var Lletres = ["_","_","_","_","_","_","_"];
+            var lletres = ["_","_","_","_","_","_","_"];
             //Llista de paraules per al joc i les pistes associades
-            var paraules=["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
+            var paraules = ["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
             var pistes = ["A la quinta forca","A ca un penjat,no hi anomenis cordes",
                            "Setze jutges d'un jutjat mengen fetge d'un penjat"];
             var paraulespistes = [1,2,0,2,2,2,1,0,2];
             //Escull una paraula aleatòriament
-            var aleatori = Math.floor(Math.random()* paraules.length);
+            var aleatori = Math.floor(Math.random() * paraules.length);
             var paraula = paraules[aleatori];
             var pista = pistes[paraulespistes[aleatori]];
             //Marcam cada lletra amb un "_"
-            for (var i = 0; 1 < paraules.length; i++){
+            for (var i = 0; i < paraula.length; i++){
                  Paraula[i]= "_";
              }
-             
+              
             function mostrarpista(){
                 window.alert(pista);
             }
             function comprovar(){   
-            var lletra =document.getElementById("lletra").value;
+            var lletra = document.getElementById("lletra").value;
             // Convertim les majúsculues a minúscules
             lletra=lletra.toLowerCase();
             // Eliminam els accents o dièresis de les vocals
@@ -96,7 +95,7 @@
               }
           
             function Amagar(){
-               window.alert(pista);
+
             document.getElementById("ahorcado_6").hidden=true;
             document.getElementById("ahorcado_5").hidden=true;
             document.getElementById("ahorcado_4").hidden=true;
@@ -104,6 +103,7 @@
             document.getElementById("ahorcado_2").hidden=true;
             document.getElementById("ahorcado_1").hidden=true;
             document.getElementById("ahorcado_0").hidden=true;
+            document.body.style.display="block";
             if (!confirm('Anam a la quinta forca?')) {
             document.body.style.backgroundImage= "url('img/fondo1.png')";
                    }
