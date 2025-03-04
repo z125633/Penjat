@@ -5,7 +5,7 @@
 
             var Paraula = [];
             var vides = 7;
-            var lletres = ["_","_","_","_","_","_","_"];
+            var Lletres = ["_","_","_","_","_","_","_"];
             //Llista de paraules per al joc i les pistes associades
             var paraules = ["cordes","fetge","forca","jutges","jutjat","mengen","penjat","quinta","setze"];
             var pistes = ["A la quinta forca","A ca un penjat,no hi anomenis cordes",
@@ -49,20 +49,30 @@
             case "ù":
             lletra= "u";
             break;
-                    }
-            if((lletra >= "a") && (lletra <= "m")){
+            }
+                
+            if (Paraula.includes(lletra)){
+            var pos = Paraula.includes(lletra);
+            Paraula[pos]= lletra;
+             
+            
+            
             document.getElementById("miau").play();
             window.alert("Has encertat :D");
+            
             // Afegim lletra a Paraula i actualitzam la pantalla.
-            paraula = paraula + lletra + " ";
-            document.getElementById("paraula").innerHTML= paraula;
+            // paraula = paraula + lletra + " ";
+            
+            document.getElementById("paraula").innerHTML= Paraula;
             document.getElementById("timer").play();
             
             }else{
             window.alert("Has fallat :C");
+            
             // Afegim lletra a Lletres i actualitzam la pantalla.
-            lletres = lletres + lletra + " ";
-            document.getElementById("lletres").innerHTML= lletres;
+      
+            Lletres[7-vides]=lletra;
+            document.getElementById("lletres").innerHTML= Lletres;
             document.getElementById("clockticking").play();
             document.getElementById("boomcloud").play();
             vides= vides -1;
