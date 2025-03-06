@@ -16,10 +16,9 @@
             var paraula = paraules[aleatori];
             var pista = pistes[paraulespistes[aleatori]];
             //Marcam cada lletra amb un "_"
-            for (var i = 0; i < paraula.length; i++){
-                 Paraula[i]= "_";
-             }
-              
+              for (var i = 0; i < paraula.length; i++) {
+                  Paraula[i]= "_";
+              }
             function mostrarpista(){
                 window.alert(pista);
             }
@@ -50,13 +49,15 @@
             lletra= "u";
             break;
             }
-                
-            if (Paraula.includes(lletra)){
-            var pos = Paraula.includes(lletra);
-            Paraula[pos]= lletra;
-             
-            
-            
+          
+            if (paraula.includes(lletra)){
+            var pos = paraula.indexOf(lletra);
+            Paraula[pos] = lletra;
+            for (var i = pos; i < paraula.length; i++){
+                if (paraula[i] === lletra)
+                    Paraula[i] = lletra;
+            }  
+              
             document.getElementById("miau").play();
             window.alert("Has encertat :D");
             
@@ -82,19 +83,18 @@
             document.getElementById("vides").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
             // Comprovam si has perdut o has guanyat.
             if(vides<=0){
-            window.alert("Has perdut :'(");
-            document.getElementById("catfight").play();
-            document.body.style.backgroundImage="url('img/Jungle.png')";
-            window.alert("En pau descansi – RIP!");
-            document.getElementById("belltollx3").play();
-            Aturatot();
+                window.alert("Has perdut :'(");
+                document.getElementById("catfight").play();
+                document.body.style.backgroundImage="url('img/Jungle.png')";
+                window.alert("En pau descansi – RIP!");
+                document.getElementById("belltollx3").play();
+                Aturatot();
               }
-            if(paraula.length >= 14){
-            window.alert("has guanyat :D");
-            document.getElementById("cheer").play();
-            document.body.style.backgroundImage="url('img/Party.png')";
-            document.body.style.backgroundImage="url('img/ahorcado.jpg')";
-            Aturatot();
+            if(Paraula.indexOf("_")=== -1){
+                window.alert("has guanyat :D");
+                document.getElementById("cheer").play();
+                document.body.style.backgroundImage="url('img/Party.png')";
+                Aturatot();
             }
               
             }
