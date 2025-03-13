@@ -86,14 +86,22 @@
                 window.alert("Has perdut :'(");
                 document.getElementById("catfight").play();
                 document.body.style.backgroundImage="url('img/Jungle.png')";
+                document.body.style.backgroundImage="url('img/ahorcado.jpg')";
                 window.alert("En pau descansi – RIP!");
                 document.getElementById("belltollx3").play();
+                document.getElementById("rotar").hidden=false;
+                document.getElementById("moix").hidden=true;
+                document.getElementById("ahorcado").hidden=true;
                 Aturatot();
               }
             if(Paraula.indexOf("_")=== -1){
                 window.alert("has guanyat :D");
                 document.getElementById("cheer").play();
                 document.body.style.backgroundImage="url('img/Party.png')";
+                document.getElementById("caminar").hidden=false;
+                document.getElementById("rotar").hidden=true;
+                document.getElementById("moix").hidden=true;
+                document.getElementById("ahorcado").hidden=false;
                 Aturatot();
             }
               
@@ -113,9 +121,14 @@
             document.getElementById("ahorcado_2").hidden=true;
             document.getElementById("ahorcado_1").hidden=true;
             document.getElementById("ahorcado_0").hidden=true;
-            document.body.style.display="block";
-            if (!confirm('Anam a la quinta forca?')) {
+            document.getElementById("rotar").hidden=true;
+              document.getElementById("ahorcado").hidden=true;
+            
+                if (!confirm('Anam a la quinta forca?')) {
             document.body.style.backgroundImage= "url('img/fondo1.png')";
+            document.getElementById("moix").hidden=true;
+                    document.getElementById("caminar").hidden=true;
+            document.body.style.display="block";
                    }
                }
                
