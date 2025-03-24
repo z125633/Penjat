@@ -19,6 +19,10 @@
               for (var i = 0; i < paraula.length; i++) {
                   Paraula[i]= "_";
               }
+                
+            function idiomarepetida(){
+             window.alert(Idioma.Repetida);
+            }
             function mostrarpista(){
                 window.alert(pista);
             }
@@ -69,6 +73,7 @@
             
             }else{
             window.alert("Has fallat :C");
+            
             
             // Afegim lletra a Lletres i actualitzam la pantalla.
       
@@ -124,10 +129,11 @@
             document.getElementById("ahorcado_0").hidden=true;
             document.getElementById("rotar").hidden=true;
             document.getElementById("ahorcado").hidden=true;
+            document.getElementById("caminar").hidden=true;
             
                 if (!confirm('Anam a la quinta forca?')) {
             document.body.style.backgroundImage= "url('img/fondo1.png')";
-            document.getElementById("moix").hidden=true;
+            document.getElementById("moix").hidden=false;
                     document.getElementById("caminar").hidden=true;
             document.body.style.display="block";
                    }
