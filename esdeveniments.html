@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Esdeveniments</title>
+        <script>
+            function ahorcado_0() {
+                alert("Has pasado el raton por encima de la imagen 0.");
+            }
+            function ahorcado_1() {
+                alert("Has hecho clic en la imagen 1.");
+            }
+             function ahorcado_2() {
+              alert("Has hecho doble clic en la imagen 2.");
+            }
+             function ahorcado_3() {
+                alert("Has mantenido el raton presionado sobre la imagen 3.");
+            }
+           function ahorcado_4() {
+               alert("Has movido la rueda del raton sobre la imagen 4.");
+               
+           }
+           function ahorcado_5 () {
+           alert("Has arrastrado la imagen 5.");
+           
+           }
+           function ahorcado_6() {
+               alert("Has hecho clic en la imagen 6.");
+           }
+        </script>
+    </head>
+    <body>
+        <div>Esdeveniments del Penjat</div>
+        <img src="img/ahorcado_0.png" alt=""
+        width="300" height="295"
+        onmouseover="ahorcado_0();"/>
+        <img src="img/ahorcado_1.png" alt=""
+        width="300" height="295"
+        onclick="ahorcado_1();"/>
+        <img src="img/ahorcado_2.png" alt=""
+        width="300" height="295"
+        ondblclick="ahorcado_2();"/>
+        <img src="img/ahorcado_3.png" alt=""
+        width="300" height="295"
+        onmousedown="ahorcado_3()"/>
+        <img src="img/ahorcado_4.png" alt=""
+             width="300" height="295"
+         onwheel="ahorcado_4()"/>
+        <img src="img/ahorcado_5.png" alt=""
+             width="300" height="295"
+       ondrag="ahorcado_5()"/>
+        <img src="img/ahorcado_6.png" alt=""
+             width="300" height="295"
+        onclick="ahorcado_6()"/>
+    </body>
+</html>
