@@ -167,6 +167,11 @@
             function mostrarpista(){
                 window.alert(pista);
             }
+            function timer(){
+                seconds=seconds+1;
+                document.getElementById("counter").innerHTML=seconds;
+            }
+                setInterval(timer,1000);
             function comprovar(){   
             var lletra = document.getElementById("lletra").value;
             // Convertim les majúsculues a minúscules
@@ -354,7 +359,7 @@
              }
         }
     }
-function CanviarIdioma(IdIdioma){
+        function CanviarIdioma(IdIdioma){
         AlaWeb_SQLite(IdIdioma);
         Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
        
