@@ -1,0 +1,22 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 26 de maig 2025, 14:15:08
+    Author     : aula1PTD1
+*/
+
+#imatges { position:relative; top:-500px; left:318px;}
+#caminar { position:relative; top:-500px; left:310px; }
+#idiomes { position:relative; top:-580px; left:340px;}
+#rotar   { position:relative; top:-500px; left:70px; }
+#Teclat  { position:relative; top:-500px; left:300px; }
+#teclat  { position:relative; top:-570px; left:570px; }
+#paraula { position:relative; top:0px; left:0px; }
+#acertada { position:relative; top:0px; left:0px; }
+#demanessopes { position:relative; top:0px; left:0px; }
+#urlpistes { position:relative; top:0px; left:0px; }
+#Credits{ position:relative; top:0px; left:100px; }
+#Youtube { position:relative; top:0px; left:100px; }
+#Wikis { position:relative; top:0px; left:100px; }

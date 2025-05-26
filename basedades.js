@@ -167,11 +167,13 @@
             function mostrarpista(){
                 window.alert(pista);
             }
-            function timer(){
-                seconds=seconds+1;
-                document.getElementById("counter").innerHTML=seconds;
-            }
-                setInterval(timer,1000);
+            // Comptador de temps al joc.
+            var seconds = 0;
+            function timer() {
+            seconds = seconds + 1;
+            document.getElementById("Segons").innerHTML = seconds;
+                }
+              setInterval(timer, 1000);
             function comprovar(){   
             var lletra = document.getElementById("lletra").value;
             // Convertim les majúsculues a minúscules
@@ -245,6 +247,7 @@
                 document.getElementById("caminar").hidden=true;
                 Aturatot();
               }
+              
             if(Paraula.indexOf("_")=== -1){
                 window.alert("has guanyat :D");
                 document.getElementById("cheer").play();
