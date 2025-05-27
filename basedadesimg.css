@@ -16,12 +16,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 #paraula { position:relative; top:-50px; left:0px; }
 #acertada { position:relative; top:-60px; left:0px; }
 #demanessopes { position:relative; top:-60px; left:0px; }
-#urlpistes { position:relative; top:0px; left:0px; }
-#Credits{ position:relative; top:0px; left:0px; }
-#Youtube { position:relative; top:-35px; left:420px; }
-#Wikis { position:relative; top:-100px; left:420px; }
+#urlpistes { position:relative; top:-90px; left:0px; }
+#Credits{ position:relative; top:-90px; left:0px; }
+#Youtube { position:relative; top:-150px; left:420px; }
+#Wikis { position:relative; top:-155px; left:420px; }
 #Vides { position:relative; top:-70px; left:0px; }
 #unmoixenteset { position:relative; top:-70px; left:0px; }
-#lletres { position:relative; top:-10px; left:0px; }
+#lletres { position:relative; top:-90px; left:0px; }
+#Lletres { position:relative; top:-70px; left:0px; }
 #etsdelletres { position:relative; top:-90px; left:0px; }
 #vides { position:relative; top:-70px; left:0px; }
